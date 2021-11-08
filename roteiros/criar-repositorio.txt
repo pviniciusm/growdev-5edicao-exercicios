@@ -1,0 +1,23 @@
+# Para projeto ainda sem repositório no github:
+
+1) Criar repositório via vscode ou diretamente via github
+
+2) Se via github:
+    - Ir na página do github e clicar em New Repository... preencher os dados necessários
+    - rodar o comando: git clone https://url_do_repositorio
+
+3) Se via vscode:
+    - Abrir aba de controle de repositório no vscode
+    - Initialize repository
+    - Criar um arquivo .gitignore vazio
+    - Clicar no botão confirmar
+    - Escrever uma mensagem de commit inicial
+    - Clicar no botão "publicar alterações"
+    - Informar o nome do repositório a ser criado
+    - Escolha se é privado ou público
+
+
+
+# Para projeto com repositório já existente
+
+1) rodar o comando: git clone https://url_do_repositorio

@@ -1,0 +1,29 @@
+# Configuração inicial de um projeto backend com Nodejs + typescript + express
+
+1) Configure o projeto git conforme roteiro
+
+2) Rode os seguintes comandos no terminal:
+    - npm init -y
+    - npm install express axios uuid
+        (axios e uuid são opcionais, foram usados em alguns exercícios)
+    - npm install -D @types/node @types/express @types/uuid ts-node-dev
+    - npx tsc --init
+
+3) Configure o tsconfig.json criado
+    - mude o target para "es6" ou superior (estamos usando o "es2020")
+    - descomente o campo "outDir" e coloque o valor "./dist/"
+    - adicione os campos:
+        - "include": ["./src/**/*"],
+        - "exclude": ["node_modules"]
+
+4) Crie o diretório src na raiz do projeto e adicione seus códigos sempre lá
+
+5) Para iniciar o server express, crie um arquivo na src (ex. "main.ts")
+    - no main.ts criado, faça o script que importe express, crie uma instancia dele e chame o método listen
+    - no package.json, adicione um script na chave "scripts"
+        "dev": "ts-node-dev --respawn --transpile-only ./src/main.ts"
+    - inicie o server local rodando o comando: npm run dev
+    - no main.ts, cuide para escolher uma porta que não esteja em uso
+    - adicione uma callback no método listen que faça um console.log("server iniciou"), assim é possível ter certeza que o servidor iniciou corretamente
+
+6) pronto! siga o desenvolvimento da api a partir do diretório ./src
