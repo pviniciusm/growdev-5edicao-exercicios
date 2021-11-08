@@ -1,12 +1,13 @@
-# Configuração inicial de um projeto backend com Nodejs + typescript + express
+# Configuração inicial de um projeto frontend básico com Nodejs + HTML/CSS/JS
+## É necessário criar um servidor node que serve arquivos estáticos com express
 
 1) Configure o projeto git conforme roteiro
 
 2) Rode os seguintes comandos no terminal:
     - npm init -y
-    - npm install express cors axios uuid
-        (axios e uuid são opcionais, foram usados em alguns exercícios)
-    - npm install -D typescript @types/node @types/express @types/cors @types/uuid ts-node-dev
+    - npm install express cors axios
+    - npm install -D typescript @types/node @types/express @types/cors ts-node-dev
+        - se não quiser usar typescript, remover da instalação
     - npx tsc --init
 
 3) Configure o tsconfig.json criado
@@ -26,4 +27,11 @@
     - no main.ts, cuide para escolher uma porta que não esteja em uso
     - adicione uma callback no método listen que faça um console.log("server iniciou"), assim é possível ter certeza que o servidor iniciou corretamente
 
-6) pronto! siga o desenvolvimento da api a partir do diretório ./src
+6) no main.ts, use o comando:
+    - app.use(express.static(__dirname + "/../public"));
+
+7) fora da src, crie um diretório public/ e crie os arquivos HTML, CSS e JS do front lá
+
+8) (não recomendado) se quiser, use o typescript para criar algum código e troque o outDir de dist/ para public/, ou copie o resultado do npx tsc de dist/ para public/
+
+9) Para subir no heroku: siga os passos do deploy do projeto no heroku como se fosse back-end (subir-backend-heroku.txt)
