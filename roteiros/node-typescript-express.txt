@@ -4,9 +4,9 @@
 
 2) Rode os seguintes comandos no terminal:
     - npm init -y
-    - npm install express axios uuid
+    - npm install express cors axios uuid
         (axios e uuid são opcionais, foram usados em alguns exercícios)
-    - npm install -D @types/node @types/express @types/uuid ts-node-dev
+    - npm install -D @types/node @types/express @types/cors @types/uuid ts-node-dev
     - npx tsc --init
 
 3) Configure o tsconfig.json criado

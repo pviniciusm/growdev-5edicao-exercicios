@@ -1,0 +1,38 @@
+# Como fazer deploy de projetos node no heroku via integração com github
+
+Pre requisitos)
+- ter cadastro no heroku
+- ter o projeto node criado
+- ter instalado o Heroku CLI
+- ter feito o login no heroku CLI
+    - Se não fez, rodar no terminal:
+        > heroku login -i
+    - Depois preencher username e senha diretamente no terminal
+
+
+1) Atualizar nosso código fonte no github
+    - O projeto node deve estar em conformidade com o roteiro node-typescript-express
+
+2) Criar o projeto no site do heroku
+
+3) Rodar no terminal o comando: heroku git:remote -a nome-do-projeto-heroku
+
+4) Setar alguns scripts no package.json:
+    - "postinstall": "npx tsc"
+    - "start": "node ./dist/main.js" (supondo que o server inicie em ./src/main.ts)
+
+5) no main.ts, setar a porta de inicalização do express com base em uma variável de ambiente usada pelo heroku. Exemplo:
+    app.listen(process.env.PORT || 8081, () => console.log("Server iniciou"));
+
+    - o process.env.PORT busca qual porta está configurada para que o node rode ok no heroku
+    - em desenv, podemos deixar alguma fixa (ex. 8081)
+
+6) não esquecer de setar o express.json() e o cors() no express
+
+7) subir tudo no github
+    - git add .
+    - git commit -m "Heroku pre-deploy"
+    - git push 
+
+8) subir no heroku
+    - git push heroku main
