@@ -34,4 +34,6 @@
 
 8) (não recomendado) se quiser, use o typescript para criar algum código e troque o outDir de dist/ para public/, ou copie o resultado do npx tsc de dist/ para public/
 
-9) Para subir no heroku: siga os passos do deploy do projeto no heroku como se fosse back-end (subir-backend-heroku.txt)
+9) (não recomendado) usar o webpack para transpilar typescript com import/export e usar no html
+
+10) Para subir no heroku: siga os passos do deploy do projeto no heroku como se fosse back-end (subir-backend-heroku.txt)
